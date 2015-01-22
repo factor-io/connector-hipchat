@@ -2,21 +2,21 @@ PATH
   remote: .
   specs:
     factor-connector-hipchat (0.0.3)
-      factor-connector-api (~> 0.0.13)
-      httparty (~> 0.13.1)
+      factor-connector-api (~> 0.0.14)
+      httparty (~> 0.13.3)
 
 GEM
   remote: https://rubygems.org/
   specs:
     celluloid (0.16.0)
       timers (~> 4.0.0)
-    factor-connector-api (0.0.13)
+    factor-connector-api (0.0.14)
       celluloid (~> 0.16.0)
     hitimes (1.2.2)
-    httparty (0.13.1)
+    httparty (0.13.3)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
-    json (1.8.1)
+    json (1.8.2)
     multi_xml (0.5.5)
     timers (4.0.1)
       hitimes
