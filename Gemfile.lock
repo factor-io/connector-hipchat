@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    factor-connector-hipchat (0.0.3)
+    factor-connector-hipchat (3.0.0)
       httparty (~> 0.13.3)
 
 GEM
