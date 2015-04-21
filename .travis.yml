@@ -8,7 +8,8 @@ rvm:
 - 2.2.2
 env:
   global:
-    secure: JyafUsGzHEXaouwqpRbrkyqdOQypTV4OoljDX8aSbGRZQq5yElvrB6WonAijAO8VaJGzNs1B/QV+3Uw0zULU6S0qVgtHccScKze0cMNNQCV9Y2iysyG2cYrPBh4mqMSpB0A4titTPXUvAxCtsMKUs87NzLHGHSOtDJR1JX9n7g0=
+  - secure: JyafUsGzHEXaouwqpRbrkyqdOQypTV4OoljDX8aSbGRZQq5yElvrB6WonAijAO8VaJGzNs1B/QV+3Uw0zULU6S0qVgtHccScKze0cMNNQCV9Y2iysyG2cYrPBh4mqMSpB0A4titTPXUvAxCtsMKUs87NzLHGHSOtDJR1JX9n7g0=
+  - secure: EfbT6TFaldH4rNxo3reCzLZvjbujCN8FHr4AxSYX5gDCUaaWFe5gUiz6vwS1bk5AKZSt8mSUsIwMH1EmcB1VjZTYeQbSTyIU5FqKlbtTi8cJGURMyDB90ROb6j/OBftnIvoze+ONXACVhsA9OFinoqihibUVlymdAgSAoPwRDoE=
 deploy:
   provider: rubygems
   gem: factor-connector-hipchat

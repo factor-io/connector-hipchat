@@ -157,46 +157,4 @@ Factor::Connector.service 'hipchat' do
       end
     end
   end
-
-  action 'send' do |data|
-    room_id = data['room_id'] || data['room']
-    color   = data['color'] || 'gray'
-    format  = data['format'] || 'text'
-    api_key = data['api_key']
-    message = data['message']
-
-    fail 'API Key is required' unless api_key
-    fail 'Message is required' unless message
-    fail 'Room ID is required' unless room_id
-
-    base       = 'https://api.hipchat.com/v2/'
-    path       = ['room', room_id, 'notification'].join('/')
-    auth_query = "?auth_token=#{api_key}"
-    uri        = base + path + auth_query
-
-    body = {
-      message: message,
-      message_format: format,
-      color: color,
-      format: 'json'
-    }
-
-    headers = {
-      'Content-Type' => 'application/json',
-      'Accept'       => 'application/json'
-    }
-
-    info "Posting message to `#{room_id}` room"
-    begin
-      http_response = HTTParty.post(uri, body: body.to_json, headers: headers)
-    rescue
-      fail "Couldn't post message"
-    end
-
-    if http_response.response.code == '204'
-      action_callback status: 'sent'
-    else
-      action_callback status: 'failed'
-    end
-  end
 end
